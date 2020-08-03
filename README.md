@@ -10,6 +10,6 @@ In edit the pages (the files page) content can be edited with different argumetn
 
 ## pywikibot
 
-Although I tried to implement the pywikibot to run my objective, the documentation was not as friendly as the wiki [API](TestWikiAPI).
+Although I tried to implement the pywikibot to run my objective, the documentation was not as friendly as the wiki [API][TestWikiAPI].
 
 [TestWikiAPI]: https://test.wikipedia.org/w/api.php
