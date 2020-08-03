@@ -1,0 +1,9 @@
+/.vscode
+/__pycache__
+/change_meta.py
+/data.json
+/f.jpg
+/pywiki
+/secrets.py
+/upload_file_directly.py
+/upload_test.py
