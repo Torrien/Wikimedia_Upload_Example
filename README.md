@@ -13,3 +13,11 @@ In edit the pages (the files page) content can be edited with different argumetn
 Although I tried to implement the pywikibot to run my objective, the documentation was not as friendly as the wiki [API][TestWikiAPI].
 
 [TestWikiAPI]: https://test.wikipedia.org/w/api.php
+
+# Wikipedia Bots
+
+I recommend creating a but user and credentials to run any API software.
+
+Read more about Bots at [https://en.wikipedia.org/wiki/Wikipedia:Bots](https://en.wikipedia.org/wiki/Wikipedia:Bots).
+
+Create your own bot at [https://www.mediawiki.org/wiki/Special:BotPasswords](https://www.mediawiki.org/wiki/Special:BotPasswords).

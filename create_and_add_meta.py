@@ -10,6 +10,12 @@
 import requests
 from secrets import WIKI_BOT_USER, WIKI_BOT_PASS
 
+# secrets file should have the user and password information
+# I recommend using a bot instead of the full user
+# Visit: https://www.mediawiki.org/wiki/Special:BotPasswords
+# Bots can have restricted operability for security.
+# Read more at https://en.wikipedia.org/wiki/Wikipedia:Bots
+
 S = requests.Session()
 URL = "https://test.wikipedia.org/w/api.php"
 # FILE_PATH = "/home/torrien/Pictures/Screenshot from 2020-08-02 19-36-00.png"
@@ -68,19 +74,19 @@ PARAMS_4 = {
     # ==Section==
     # ===Subsection===
     # ====Sub-subsection====
-    "comment": """==Description==
+    # f" " or f""" """ strings require double {{ or }} to represent { or }.
+    # Single { and } are used for variables.
+    "comment": f"""==Description==
 Test upload small screenshot 5. 
 ==Summary==
 ===Metadata===
-{{Information
-|Description=Just a small screenshot
-|Date='2020-08-02'
-|Source=apa.ebeltran.me
-|Author='Torrien'
-|Permission='Use as you please. No restrictions.'
-}}"""
-    # "tags":"description=Just a small screenshot|date=2020-08-02|source=apa.ebeltran.me|author=Torrien|permission=Use as you please. No restrictions.",
-
+{{{{Information
+|Description=(Image Description)
+|Date=(Date of image creation)
+|Source=(URL to Image)
+|Author={WIKI_BOT_USER}
+|Permission=(Enter your permissions)
+}}}}"""
 }
 
 FILE = {'file':(NEW_FN, open(FILE_PATH, 'rb'), 'multipart/form-data')}
