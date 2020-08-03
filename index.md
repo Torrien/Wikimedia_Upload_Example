@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+# Objective
 
-You can use the [editor on GitHub](https://github.com/Torrien/Wikimedia_Upload_Example/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This code is an example of how to upload images to `test.wikipedia.org`. The code shows how metadata templates are just included directly into the `comments` parameter of the `upload` action against the wiki API.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Justification
 
-### Markdown
+The Wiki documentation for wikimedia is not very clear about how to include data during the upload process. I originally discover this by applying edits to an already uploaded image.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In edit the pages (the files page) content can be edited with different argumetns including: `text`, `appendtext`, `prependtext`, or even a combination of `section` with `sectiontitle` and `text`.
 
-```markdown
-Syntax highlighted code block
+## pywikibot
 
-# Header 1
-## Header 2
-### Header 3
+Although I tried to implement the pywikibot to run my objective, the documentation was not as friendly as the wiki [API][TestWikiAPI].
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Torrien/Wikimedia_Upload_Example/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[TestWikiAPI]: https://test.wikipedia.org/w/api.php
