@@ -10,7 +10,7 @@
 import requests
 from secrets import WIKI_BOT_USER, WIKI_BOT_PASS
 
-# secrets file should have the user and password information
+# secrets.py file should have the user and password information
 # I recommend using a bot instead of the full user
 # Visit: https://www.mediawiki.org/wiki/Special:BotPasswords
 # Bots can have restricted operability for security.
@@ -18,10 +18,6 @@ from secrets import WIKI_BOT_USER, WIKI_BOT_PASS
 
 S = requests.Session()
 URL = "https://test.wikipedia.org/w/api.php"
-# FILE_PATH = "/home/torrien/Pictures/Screenshot from 2020-08-02 19-36-00.png"
-# FILE_PATH = "/home/torrien/Pictures/Screenshot from 2020-08-02 19-40-48.png"
-# FILE_PATH = "/home/torrien/Pictures/Screenshot from 2020-08-02 20-23-17.png"
-# FILE_PATH = "/home/torrien/Pictures/Screenshot from 2020-08-02 21-01-32.png"
 FILE_PATH = "test.jpg"
 NEW_FN = f'test upload  by.png'
 
