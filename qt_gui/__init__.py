@@ -21,13 +21,11 @@ class MyFirstForm(QDialog):
         super(MyFirstForm, self).__init__(parent)
         self.setWindowTitle("My First Form")
         # Create widgets
-        self.edit = QLineEdit("Write my name here..")
+        self.edit = SmartInput("Write my name here..", self)
         self.button = QPushButton("Show Greetings")
 
         # Add button signal to greetings slot
         self.button.clicked.connect(self.greetings)
-        # self.edit.focusInEvent(self.start_edit)
-        # self.edit.focusOutEvent(self.end_edit)
 
         # Create layout and add widgets
         layout = QVBoxLayout()
@@ -39,32 +37,27 @@ class MyFirstForm(QDialog):
 
     # Greets the user
     def greetings(self):
-        if self.edit.text() == "Write my name here..":
+        if self.edit.text() == self.edit.PROMPT:
             print("Write a name.")
         else:
             print("Hello {}".format(self.edit.text()))
-
-    def start_edit(self):
-        if self.edit.text() == "Write my name here..":
-            self.edit.ORIGINAL_TEXT = self.edit.text()
-            self.edit.setText("")
 
     def end_edit(self):
         pass
 
 
-# class SmartInput(QLineEdit):
-#     def __init__(self, prompt="Enter value.", parent=None):
-#         super().__init__(parent=parent)
-#         self.PROMPT = prompt
-    
-#     def focusInEvent(self):
-#         if self.text() == self.PROMPT:
-#             self.setText("")
+class SmartInput(QLineEdit):
+    def __init__(self, prompt="Enter value.", parent=None):
+        super().__init__(prompt, parent=parent)
+        self.PROMPT = prompt
 
-#     def focusOutEvent(self):
-#         if self.text().strip() == "":
-#             self.setText(self.PROMPT)
+    def focusInEvent(self, event):
+        if self.text() == self.PROMPT:
+            self.setText("")
+
+    def focusOutEvent(self, event):
+        if self.text().strip() == "":
+            self.setText(self.PROMPT)
 
 
 
