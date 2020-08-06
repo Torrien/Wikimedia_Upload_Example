@@ -7,3 +7,5 @@ __pycache__
 secrets.py
 /upload_file_directly.py
 /upload_test.py
+*~
+.*
