@@ -20,6 +20,9 @@ class WikiCommonsUploader(Gtk.Window):
         self.press_test_button.PRESSED_TIMES= 0
         # self.box.pack_start(self.press_test_button, True, True, 2)
 
+        self.status_textview: Gtk.TextView = Gtk.TextView.new()
+        # self.status_textview.
+
         self.exit_button = Gtk.Button(label="Exit")
         self.exit_button.connect("clicked", self.destroy_wicu)
         # self.box.pack_end(self.exit_button, True, True, 2)
@@ -27,8 +30,9 @@ class WikiCommonsUploader(Gtk.Window):
         # self.show()
         # self.connect("destroy", Gtk.main_quit)
 
-        self.grid.attach(self.press_test_button, 0, 0, 3, 1)
-        self.grid.attach(self.exit_button, 3, 1, 4, 2)
+        self.grid.attach(self.press_test_button, 1, 0, 1, 1)
+        self.grid.attach(self.status_textview, 0, 1, 3, 1)
+        self.grid.attach(self.exit_button, 1, 6, 1, 1)
     
     def destroy_wicu(self, widget):
         self.destroy()
@@ -41,10 +45,13 @@ class WikiCommonsUploader(Gtk.Window):
             self.destroy()
 
 
-
-
-if __name__ == "__main__":
+def hello_world():
     WiCU = WikiCommonsUploader(title="Hello World")
     WiCU.connect("destroy", Gtk.main_quit)
     WiCU.show_all()
     Gtk.main()
+
+
+if __name__ == "__main__":
+    hello_world()
+
